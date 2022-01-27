@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+function Quiz() {
+
+  function quiz(num:number) {
+    if (num % 22 == 0) {
+      return "candybar";
+    } else if (num % 11 == 0) {
+      return "bar";
+    } else if (num % 2 == 0) {
+      return "candy";
+    } else {
+      return num;
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <p>{quiz(2)}</p>
+      <p>{quiz(11)}</p>
+      <p>{quiz(22)}</p>
+      <p>{quiz(3)}</p>
     </div>
   );
 }
 
-export default App;
+export default Quiz;
